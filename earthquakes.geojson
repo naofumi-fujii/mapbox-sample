@@ -14,7 +14,10 @@
         "felt": null,
         "tsunami": 0
       },
-      "geometry": { "type": "Point", "coordinates": [139.868427, 35.706657] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [139.87108912794162, 35.67754744950297]
+      }
     }
   ]
 }
