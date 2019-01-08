@@ -28,9 +28,6 @@
     ],
     "no-var": [
       "error"
-    ],
-    "curly": [
-      "all"
     ]
   }
 }

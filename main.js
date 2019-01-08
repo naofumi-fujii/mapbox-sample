@@ -80,7 +80,9 @@ map.on("load", function() {
 		map
 			.getSource("earthquakes")
 			.getClusterExpansionZoom(clusterId, function(err, zoom) {
-				if (err) {return;}
+				if (err) {
+					return;
+				}
 
 				map.easeTo({
 					center: features[0].geometry.coordinates,
