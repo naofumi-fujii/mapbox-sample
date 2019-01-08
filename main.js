@@ -4,7 +4,7 @@ const map = new mapboxgl.Map({
 	container: "map",
 	style: "mapbox://styles/mapbox/streets-v10",
 	center: [139.745433, 35.658581],
-	zoom: 9
+	zoom: 10
 });
 
 const language = new MapboxLanguage();
@@ -75,7 +75,9 @@ map.on("load", function() {
 
 	// inspect a cluster on click
 	map.on("click", "clusters", function(e) {
-		const features = map.queryRenderedFeatures(e.point, { layers: ["clusters"] });
+		const features = map.queryRenderedFeatures(e.point, {
+			layers: ["clusters"]
+		});
 		const clusterId = features[0].properties.cluster_id;
 		map
 			.getSource("earthquakes")
