@@ -3,8 +3,8 @@ mapboxgl.accessToken =
 let map = new mapboxgl.Map({
 	container: "map",
 	style: "mapbox://styles/mapbox/streets-v10",
-	center: [-103.59179687498357, 40.66995747013945],
-	zoom: 3
+	center: [139.745433, 35.658581],
+	zoom: 9
 });
 
 let language = new MapboxLanguage();
