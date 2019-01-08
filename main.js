@@ -1,13 +1,13 @@
 mapboxgl.accessToken =
   "pk.eyJ1IjoibmFvZnVtaS1mdWppaSIsImEiOiJjanE0eTVzYnExeXZtNDRzYnFtNWxkYTIwIn0.64rj32UqyAVCoUK8nl5TbA";
-var map = new mapboxgl.Map({
+let map = new mapboxgl.Map({
 	container: "map",
 	style: "mapbox://styles/mapbox/streets-v10",
 	center: [-103.59179687498357, 40.66995747013945],
 	zoom: 3
 });
 
-var language = new MapboxLanguage();
+let language = new MapboxLanguage();
 map.addControl(language);
 
 map.on("load", function() {
@@ -75,8 +75,8 @@ map.on("load", function() {
 
 	// inspect a cluster on click
 	map.on("click", "clusters", function(e) {
-		var features = map.queryRenderedFeatures(e.point, { layers: ["clusters"] });
-		var clusterId = features[0].properties.cluster_id;
+		let features = map.queryRenderedFeatures(e.point, { layers: ["clusters"] });
+		let clusterId = features[0].properties.cluster_id;
 		map
 			.getSource("earthquakes")
 			.getClusterExpansionZoom(clusterId, function(err, zoom) {
@@ -90,8 +90,8 @@ map.on("load", function() {
 	});
 
 	map.on("click", "unclustered-point", function(e) {
-		var coordinates = e.features[0].geometry.coordinates.slice();
-		var description = e.features[0].properties.description;
+		let coordinates = e.features[0].geometry.coordinates.slice();
+		let description = e.features[0].properties.description;
 
 		// Ensure that if the map is zoomed out such that multiple
 		// copies of the feature are visible, the popup appears
