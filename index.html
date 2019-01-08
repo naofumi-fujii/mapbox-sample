@@ -5,6 +5,7 @@
     <title>Create and style clusters</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js'></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-language/v0.10.0/mapbox-gl-language.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
     <style>
 body { margin:0; padding:0; }
@@ -20,10 +21,13 @@ body { margin:0; padding:0; }
       mapboxgl.accessToken = 'pk.eyJ1IjoibmFvZnVtaS1mdWppaSIsImEiOiJjanE0eTVzYnExeXZtNDRzYnFtNWxkYTIwIn0.64rj32UqyAVCoUK8nl5TbA';
 var map = new mapboxgl.Map({
   container: 'map',
-  style: 'mapbox://styles/mapbox/streets-v9',
+  style: 'mapbox://styles/mapbox/streets-v10',
   center: [-103.59179687498357, 40.66995747013945],
   zoom: 3
 });
+
+var language = new MapboxLanguage();
+map.addControl(language);
 
 map.on('load', function() {
   // Add a new source from our GeoJSON data and set the
