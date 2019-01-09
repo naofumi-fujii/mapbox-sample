@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/naofumi-fujii/mapbox-sample/issues"
   },
-  "homepage": "https://github.com/naofumi-fujii/mapbox-sample#readme"
+  "homepage": "https://github.com/naofumi-fujii/mapbox-sample#readme",
+  "dependencies": {
+    "ramda": "^0.26.1"
+  }
 }
