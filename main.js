@@ -35,10 +35,10 @@ map.on("load", function() {
 					},
 					geometry: {
 						type: "Point",
-						coordinates: [139.87108912794162, 35.67754744950297]
+						coordinates: [139.8738357099728, 35.66081258088127]
 					}
 				}),
-				R.range(0, 5)
+				R.range(0, 200)
 			)
 		},
 		cluster: true,
@@ -67,7 +67,7 @@ map.on("load", function() {
 				"#f28cb1"
 			],
 			"circle-radius": ["step", ["get", "point_count"], 20, 100, 30, 750, 40],
-			"circle-opacity": 0.4
+			"circle-opacity": 0.6
 		}
 	});
 
