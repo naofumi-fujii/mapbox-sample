@@ -131,6 +131,10 @@ map.on("load", function() {
 			.addTo(map);
 	});
 
+	map.on("click", function(e) {
+		alert(JSON.stringify(e.lngLat));
+	});
+
 	map.on("mouseenter", "clusters", function() {
 		map.getCanvas().style.cursor = "pointer";
 	});
