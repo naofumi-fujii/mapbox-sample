@@ -23,8 +23,8 @@ map.on("load", function() {
 				type: "name",
 				properties: { name: "urn:ogc:def:crs:OGC:1.3:CRS84" }
 			},
-			features: [
-				{
+			features: R.map(
+				f => ({
 					type: "Feature",
 					properties: {
 						id: "ak16994521",
@@ -37,8 +37,9 @@ map.on("load", function() {
 						type: "Point",
 						coordinates: [139.87108912794162, 35.67754744950297]
 					}
-				}
-			]
+				}),
+				R.range(0, 5)
+			)
 		},
 		cluster: true,
 		clusterMaxZoom: 14, // Max zoom to cluster points on
