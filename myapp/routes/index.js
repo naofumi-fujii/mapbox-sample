@@ -7,7 +7,9 @@ router.get("/", function(req, res, next) {
 });
 
 router.get("/earthquakes.geojson", function(req, res, next) {
-	res.render("index", { title: "Express" });
+	res.json({
+		message: "Hello,world"
+	});
 });
 
 module.exports = router;
