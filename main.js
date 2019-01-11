@@ -24,7 +24,7 @@ map.on("load", function() {
 				properties: { name: "urn:ogc:def:crs:OGC:1.3:CRS84" }
 			},
 			features: R.map(
-				f => ({
+				() => ({
 					type: "Feature",
 					properties: {
 						id: "ak16994521",
