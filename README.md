@@ -1,4 +1,4 @@
 # mapbox-sample
 
-$ git clone
-$ npm install
+- $ git clone
+- $ npm install
